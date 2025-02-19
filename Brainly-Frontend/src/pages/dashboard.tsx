@@ -58,7 +58,7 @@ export function Dashboard() {
             onClick={async () => {
               try {
                 const response = await axios.post(
-                  `${BACKEND_URL}/api/v1/brain/share`,
+                  `https://brainly-backend-murex.vercel.app/api/v1/brain/share`,
                   { share: true },
                   {
                     headers: {
@@ -66,7 +66,7 @@ export function Dashboard() {
                     },
                   }
                 );
-                const shareUrl = `http://localhost:5173/share/${response.data.hash}`;
+                const shareUrl = `https://brainly-backend-murex.vercel.app/share/${response.data.hash}`;
                 console.log("Share URL:", shareUrl);
                 alert(shareUrl);
               } catch (error) {

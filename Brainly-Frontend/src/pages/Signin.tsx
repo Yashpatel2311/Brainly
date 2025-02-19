@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
-import { BACKEND_URL } from "../config";
+// import { BACKEND_URL } from "../config";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -14,10 +14,13 @@ export function Signin() {
       const username = usernameref.current?.value;
       const password = passwordref.current?.value;
 
-      const res = await axios.post(BACKEND_URL + "/api/v1/signin", {
-        username,
-        password,
-      });
+      const res = await axios.post(
+        "https://brainly-backend-murex.vercel.app/api/v1/signin",
+        {
+          username,
+          password,
+        }
+      );
 
       const jwt = res.data.token;
       localStorage.setItem("token", jwt);

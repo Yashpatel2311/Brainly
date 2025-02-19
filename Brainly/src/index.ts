@@ -153,4 +153,4 @@ app.get("/api/v1/brain/:shareLink", async (req, res) => {
   });
 });
 
-app.listen(3000);
+app.listen("https://brainly-backend-murex.vercel.app");
