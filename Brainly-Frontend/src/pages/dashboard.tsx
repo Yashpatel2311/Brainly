@@ -7,7 +7,7 @@ import { ShareIcon } from "../Icons/ShareIcon";
 import { Sidebar } from "../components/Sidebar";
 import { useContent } from "../hooks/useContent";
 import axios from "axios";
-import { BACKEND_URL } from "../config";
+// import { BACKEND_URL } from "../config";
 
 export function Dashboard() {
   const [ModalOpen, setModalOpen] = useState(false);
