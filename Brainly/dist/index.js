@@ -91,6 +91,7 @@ app.post("/api/v1/brain/share", middleware_1.usermiddleware, (req, res) => __awa
     const share = req.body.share;
     if (share) {
         const existinglink = yield db_1.Linkmodel.findOne({
+            //@ts-ignore
             userId: req.userId,
         });
         if (existinglink) {
@@ -101,6 +102,7 @@ app.post("/api/v1/brain/share", middleware_1.usermiddleware, (req, res) => __awa
         }
         const hash = (0, utils_1.random)(10);
         yield db_1.Linkmodel.create({
+            //@ts-ignore
             userId: req.userId,
             hash: hash,
         });
@@ -110,6 +112,7 @@ app.post("/api/v1/brain/share", middleware_1.usermiddleware, (req, res) => __awa
     }
     else {
         yield db_1.Linkmodel.deleteOne({
+            //@ts-ignore
             userId: req.userId,
         });
         res.json({

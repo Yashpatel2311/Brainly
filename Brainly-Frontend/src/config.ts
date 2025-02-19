@@ -1,1 +1,1 @@
-export const BACKEND_URL = "https://brainly-backend-murex.vercel.app";
+export const BACKEND_URL = "https://localhost:3000";
